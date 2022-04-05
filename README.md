@@ -27,4 +27,4 @@ Data is gathered by scraping from pytrends and later pre-processed followed by
 ## Local Maxima, Slopes and Trend Durations
 Find the local peaks such that we obtain only the trending pattern, from the trend's initial ascend till its death which is proportional to a threshold which is peak specific.
 Slopes calculated
-
+ 
