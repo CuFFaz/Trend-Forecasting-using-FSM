@@ -1,6 +1,6 @@
 ## Trend Forecasting using FSM
 
-# A Brief Intro
+### A Brief Intro
 Predicting trend patterns based on <a href='https://en.wikipedia.org/wiki/Finite-state_machine'>Finite State machine</a> via state-slope estimation. Trend patterns when considered as a state machine, shows the possibility of an arbitrary point on the trendline to possess one of the multiple states(based on its state transition table)(predefined in the script) through its slope and direction. 
 Just for a brief understanding, for a certain trend 3 states can be considered - ascending, peak or descending. Based on initial input slope of a line we map a particular state and furthermore transitions between these states are estimated based on the training data of different variants of <a href='https://www.ig.com/en/trading-strategies/10-chart-patterns-every-trader-needs-to-know-190514'>trend patterns</a>. For such a data dependent model we use data from <a href='https://trends.google.com/trends'>Google Trends</a>. 
 
@@ -8,8 +8,8 @@ Vision to the Project: Extrapolate unusual keywords whose polularity on Google S
 
 Primarily this project has 3 parts:
 1. Data Extraction and Preprocessing
-2. Training Data for states
-3. Get dataframe of current & forecasted Trends 
+2. Train Data
+3. Feed Everything to model
 
 
 #### Google Search based Data
