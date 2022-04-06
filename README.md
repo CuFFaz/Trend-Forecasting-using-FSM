@@ -86,6 +86,9 @@ python3 model.py
 Reference:
 
 <a href='https://newslifespan.com/'>Trend/News Lifespan</a>
+
 <a href='https://towardsdatascience.com/using-google-trends-at-scale-1c8b902b6bfa#:~:text=Currently%2C%20the%20public%2Dfacing%20Google,of%20all%20the%20major%20candidates.'>Google Trends at Scale</a>
+
 <a href='https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.8.5119&rep=rep1&type=pdf'>FSM Predictors</a>
+
 <a href='https://www.javatpoint.com/finite-state-machine'>FSM Intro</a>
