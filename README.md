@@ -75,3 +75,17 @@ python3 train.py
 python3 model.py
 ```
 
+#### Tasks implemented in this project:
+1. Scraping from PyTrends
+2. Making multiple queries comparable in Google Trends
+3. Data Preprocessing and Manipulating/Transforming Dataframes 
+4. Slope Calculation
+5. FSM Model implementation in python
+
+
+Reference:
+
+<a href='https://newslifespan.com/'>Trend/News Lifespan</a>
+<a href='https://towardsdatascience.com/using-google-trends-at-scale-1c8b902b6bfa#:~:text=Currently%2C%20the%20public%2Dfacing%20Google,of%20all%20the%20major%20candidates.'>Google Trends at Scale</a>
+<a href='https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.8.5119&rep=rep1&type=pdf'>FSM Predictors</a>
+<a href='https://www.javatpoint.com/finite-state-machine'>FSM Intro</a>
