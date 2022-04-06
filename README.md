@@ -2,7 +2,7 @@
 
 ### Overview
 Predicting trend patterns based on <a href='https://en.wikipedia.org/wiki/Finite-state_machine'>Finite State machine</a> via state-slope estimation. Trend patterns when considered as a state machine, shows the possibility of an arbitrary point on the trendline to possess one of the multiple states(based on its state transition table)(predefined in the script) through its slope and direction. 
-For a brief understanding, for a certain trend 3 states can be considered - ascending, peak or descending state. Based on initial input i.e slope of a line, we map it to a particular state and later transitions between these states are estimated based on the training data of different variants of <a href='https://www.ig.com/en/trading-strategies/10-chart-patterns-every-trader-needs-to-know-190514'>trend patterns</a>. For such a data dependent model, we use data from <a href='https://trends.google.com/trends'>Google Trends</a>. 
+For a brief understanding, for a certain trend 3 states can be considered - ascending, peak or descending state. Based on initial input i.e slope of a line, we map it to a particular state and later transitions between these states are estimated based on the training data of different variants of <a href='https://www.ig.com/en/trading-strategies/10-chart-patterns-every-trader-needs-to-know-190514'>trend patterns</a>. For such a data dependent model, we use data from <a href='https://trends.google.com/trends'>Google Trends</a> for past 365 days for 61 keywords. 
 
 Vision to the Project: Extrapolate trends of unusual keywords whose polularity on Google Search just started amplifying swiftly. Example- Covid, Omicron, Someone slapped someone at Oscars, etc
 
@@ -50,17 +50,19 @@ For a single input keyword,
 - TrendsSoFar - Provides clipped off trend patterns obtained from training data for a specific keyword.
 - CurrentState - Names of Assigned states for previous and present datapoints for a specific keyword. 
 - NextState - Names of Future states predicted for a specific keyword.
+- TimeTOPeak(WIP) - Estimated Time (in days) to reach the peak of the trend.
+- TimeToDie(WIP) - Estimated Time (in days) for the trend to die from the peak to global minima. 
 
 ### To Run Locally...
 1. Clone/Download the repo
 ```
 $ git clone
 ```
-2. Install dependencies
+2. Install dependencies for the project
 ```
 $ pip3 install -r requirements.txt
 ```
-3. Run trends.py for extracting data from google trends for keywords mentioned in 'Data/keywords.csv' 
+3. Run trends.py for extracting daily data for past 365 days from google trends for keywords mentioned in 'Data/keywords.csv'
 ```
 $ python3 trends.py
 ```
@@ -72,3 +74,4 @@ python3 train.py
 ```
 python3 model.py
 ```
+
