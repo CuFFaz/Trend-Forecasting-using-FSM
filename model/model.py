@@ -267,10 +267,10 @@ if __name__ == "__main__":
     pd.set_option('display.max_rows', None)
     pd.set_option('display.width', 180)
 
-    app = TrendFSMModel(keyword='T20 World Cup', df_slopes=pd.DataFrame())
-    df = pd.read_csv('Data/newscycle_daily.csv', parse_dates=['date'])
-    df = df[df['keyword'] == 'Omicron']
-    #for i in range(df.shape[0]):
-        #app.process_data_TD(df=df[:i+1])
-    app.process_data_TD(df=df)#[df['date'] < datetime(2021, 12, 19)])
+    # app = TrendFSMModel(keyword='Omicron', df_slopes=pd.DataFrame())
+    # df = pd.read_csv('Data/newscycle_daily.csv', parse_dates=['date'])
+    # df = df[df['keyword'] == 'Omicron']
+    # #for i in range(df.shape[0]):
+    #     #app.process_data_TD(df=df[:i+1])
+    # app.process_data_TD(df=df)#[df['date'] < datetime(2021, 12, 19)])
     t2 = time.perf_counter()

@@ -1,5 +1,6 @@
 import time
 import pandas as pd
+import argparse
 from model.model import TrendFSMModel
 
 class ModelMain:
@@ -21,10 +22,10 @@ class ModelMain:
         self.TrendsSoFar()
         return self.fsm.state
       
-    def TimeToPeak(self):
+    def TimeToPeak(self): #WIP
         return
 
-    def TimeToDie(self):
+    def TimeToDie(self): #WIP
         return
 
     @property
@@ -34,9 +35,12 @@ class ModelMain:
 if __name__ == "__main__":
     t1 = time.perf_counter()
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--keyword', type=str, help='input keyword which is to be predicted')
+    opt = parser.parse_args()
     pd.set_option('display.max_columns', None)
     pd.set_option('display.max_rows', None)
     pd.set_option('display.width', 180)
-    app = ModelMain(keyword='Omicron')
+    app = ModelMain(keyword=opt.keyword)
 
     print(app.NextState())
