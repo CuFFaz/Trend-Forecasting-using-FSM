@@ -68,11 +68,11 @@ $ python3 trends.py
 ```
 4. Run train.py for computing slopes and trend durations which would be used by fsm model to define states.
 ```
-python3 train.py
+$ python3 train.py
 ```
 5. Run main.py with the keyword mentioned in the driver code whose trend is to be predicted.
 ```
-python3 model.py
+$ python3 model.py
 ```
 
 #### Tasks implemented in this project:
@@ -83,7 +83,7 @@ python3 model.py
 5. FSM Model implementation in python
 
 
-Reference:
+#### References:
 
 <a href='https://newslifespan.com/'>Trend/News Lifespan</a>
 
