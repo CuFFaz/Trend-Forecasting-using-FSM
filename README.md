@@ -1,6 +1,6 @@
 ## Trend Forecasting using FSM
 
-### A Brief Intro
+### Overview
 Predicting trend patterns based on <a href='https://en.wikipedia.org/wiki/Finite-state_machine'>Finite State machine</a> via state-slope estimation. Trend patterns when considered as a state machine, shows the possibility of an arbitrary point on the trendline to possess one of the multiple states(based on its state transition table)(predefined in the script) through its slope and direction. 
 For a brief understanding, for a certain trend 3 states can be considered - ascending, peak or descending state. Based on initial input i.e slope of a line, we map it to a particular state and later transitions between these states are estimated based on the training data of different variants of <a href='https://www.ig.com/en/trading-strategies/10-chart-patterns-every-trader-needs-to-know-190514'>trend patterns</a>. For such a data dependent model, we use data from <a href='https://trends.google.com/trends'>Google Trends</a>. 
 
@@ -27,7 +27,48 @@ Data is gathered by scraping from pytrends and later pre-processed in trends.py 
 Find the local peaks such that we obtain only the trending pattern, from the trend's initial ascend till its death which is proportional to a threshold which is peak specific.
 Slopes are calculated for these trending patterns and respective durations for slope ascend and descend are computed as well in train.py
 
+### FSM Model
+Implementation of FSM is done in model.py where-in States mentioned below are predefined for variants of trend patterns according to the slopes.
 
+| Trend States    |
+|----------------------|
+| STEADY_GROWTH        |
+| INITIAL_INTEREST     |
+| ACCELERATED_INTEREST |
+| SPIKE                |
+| PEAK                 |
+| VALLEY               |
+| PLATEAU              |
+| STEADY_DECLINE       |
+| INITIAL_DECLINE      |
+| GRADUAL_DEATH        |
+| CRASH                |
 
+Input to the Model: A single keyword.
+Output of Model: Outputs can be channeled between TrendsSoFar, CurrentState, NextState in main.py
+For a single input keyword,
+- TrendsSoFar - Provides clipped off trend patterns obtained from training data for a specific keyword.
+- CurrentState - Names of Assigned states for previous and present datapoints for a specific keyword. 
+- NextState - Names of Future states predicted for a specific keyword.
 
-
+### To Run Locally...
+1. Clone/Download the repo
+```
+$ git clone
+```
+2. Install dependencies
+```
+$ pip3 install -r requirements.txt
+```
+3. Run trends.py for extracting data from google trends for keywords mentioned in 'Data/keywords.csv' 
+```
+$ python3 trends.py
+```
+4. Run train.py for computing slopes and trend durations which would be used by fsm model to define states.
+```
+python3 train.py
+```
+5. Run main.py with the keyword mentioned in the driver code whose trend is to be predicted.
+```
+python3 model.py
+```
