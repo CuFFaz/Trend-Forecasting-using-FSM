@@ -72,7 +72,7 @@ $ python3 train.py
 ```
 5. Run main.py with the keyword mentioned in the driver code whose trend is to be predicted.
 ```
-$ python3 model.py
+$ python3 model.py --keyword "KEYWORD NAME"
 ```
 
 #### Tasks implemented in this project:
