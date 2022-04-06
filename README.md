@@ -62,7 +62,7 @@ $ git clone
 ```
 $ pip3 install -r requirements.txt
 ```
-3. Run trends.py for extracting daily data for past 365 days from google trends for keywords mentioned in 'Data/keywords.csv'
+3. Run trends.py for extracting daily data for past 365 days from google trends for keywords and their categories mentioned in 'keywords.csv' in root dir
 ```
 $ python3 trends.py
 ```
