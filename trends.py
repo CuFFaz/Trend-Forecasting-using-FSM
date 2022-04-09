@@ -136,7 +136,7 @@ if __name__ == "__main__":
     #Read csv where in all our Keywords are mentioned
     df_kw = pd.read_csv('keywords.csv')
     data_duration_type = 'daily'
-    kw_list = df_kw['keywords'].to_list()
+    kw_list = df_kw['keyword'].to_list()
     key_ref = "google news"
     #Get Keyword specific Data from Google Trends 
     a = Trends(kw_list=kw_list, key_ref=key_ref)
