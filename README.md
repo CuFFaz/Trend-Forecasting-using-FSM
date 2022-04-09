@@ -44,8 +44,8 @@ Implementation of FSM is done in model.py where-in States mentioned below are pr
 | GRADUAL_DEATH        |
 | CRASH                |
 
-Input to the Model: A single keyword.
-Output of Model: Outputs can be channeled between TrendsSoFar, CurrentState, NextState in main.py
+Input to the Model: A single keyword.<br>
+Output of Model: Outputs can be channeled between TrendsSoFar, CurrentState, NextState in main.py<br>
 For a single input keyword,
 - TrendsSoFar - Provides clipped off trend patterns obtained from training data for a specific keyword.
 - CurrentState - Names of Assigned states for previous and present datapoints for a specific keyword. 
@@ -56,7 +56,7 @@ For a single input keyword,
 ### To Run Locally...
 1. Clone/Download the repo
 ```
-$ git clone
+$ git clone https://github.com/CuFFaz/Trend-Forecasting-using-FSM.git
 ```
 2. Install dependencies for the project
 ```
@@ -85,10 +85,7 @@ $ python3 model.py --keyword "KEYWORD NAME"
 
 #### References:
 
-<a href='https://newslifespan.com/'>Trend/News Lifespan</a>
-
-<a href='https://towardsdatascience.com/using-google-trends-at-scale-1c8b902b6bfa#:~:text=Currently%2C%20the%20public%2Dfacing%20Google,of%20all%20the%20major%20candidates.'>Google Trends at Scale</a>
-
-<a href='https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.8.5119&rep=rep1&type=pdf'>FSM Predictors</a>
-
+<a href='https://newslifespan.com/'>Trend/News Lifespan</a><br>
+<a href='https://towardsdatascience.com/using-google-trends-at-scale-1c8b902b6bfa#:~:text=Currently%2C%20the%20public%2Dfacing%20Google,of%20all%20the%20major%20candidates.'>Google Trends at Scale</a><br>
+<a href='https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.8.5119&rep=rep1&type=pdf'>FSM Predictors</a><br>
 <a href='https://www.javatpoint.com/finite-state-machine'>FSM Intro</a>
